@@ -31,7 +31,9 @@
 		"Setney": "admin",
 		"Personal": "core",
 		"Emoticons": "svg",
-		"storybook-static": "storybook"
+		"storybook-static": "storybook",
+		"Vite": "sublime",
+		"NextJS": "next"
 	},
     "material-icon-theme.files.associations": {
 		"Vscode":  "vscode",
@@ -66,7 +68,10 @@
 		"package.md": "parcel",
 		"Snippets.md": "silverstripe",
 		"Emoticons.md": "moonscript",
-		"Summary.md": "contributing"
+		"Summary.md": "contributing",
+		"Elearning.md": "database",
+		"Vite.md": "vite",
+		"NextJS.md": "next"
 	},
     // Bracket pair coloraized configuration
     "brackets-pair-colorized-2.colors": [
