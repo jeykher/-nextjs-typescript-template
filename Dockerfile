@@ -2,7 +2,9 @@
 
 # STAGE 1 DEPENDENCIES INSTALLATION PROCESS
 
-FROM node:18.1.0-alpine3.14 AS installer
+ARG NODE_VERSION=18
+
+FROM node:${NODE_VERSION}-alpine AS installer
 
 RUN apk add --no-cache libc6-compat && \ 
     apk add nano -v --progress && \
@@ -16,7 +18,7 @@ RUN yarn install --frozen-lockfile
 
 # STAGE 2 APP BUILDING PROCESS
 
-FROM node:18.1.0-alpine3.14  AS builder
+FROM node:${NODE_VERSION}-alpine  AS builder
 
 RUN apk add --no-cache libc6-compat && \
     apk add nano -v --progress && \
@@ -39,7 +41,7 @@ RUN yarn build
 
 # STAGE 3 DEPLOY PROCESS
 
-FROM node:18.1.0-alpine3.14 AS deployer
+FROM node:${NODE_VERSION}-alpine AS deployer
 
 RUN apk add --no-cache libc6-compat && \ 
     apk add nano -v --progress && \
